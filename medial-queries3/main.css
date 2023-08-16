@@ -1,5 +1,5 @@
 body {
-  background: peachpuff;
+  background: rgb(206, 131, 65);
 }
 * {
   border: 1px solid black;
@@ -12,13 +12,14 @@ body {
 }
 .wrapper {
   display: flex;
-  flex-direction: row;
-  flex-grow: 2;
-  align-items: center;
-  min-height: 60vh;
   flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
+  flex-grow: 3;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 52vh;
 }
+
 .wrapper,
 header,
 footer,
@@ -27,26 +28,33 @@ aside {
   margin: 0.5em;
   max-height: 10vh;
 }
-footer{
-  justify-content: flex-end;
+aside {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 20vh;
+}
+aside > div {
+  flex-grow: 10;
+  margin: 0.5em;
 }
 @media (min-width: 600px) {
   .wrapper {
-    flex-direction: row;
+    justify-content: center;
+    flex-basis: 70%;
+    min-height: 80vh;
   }
-  aside {
-    width: 40%;
-    flex: 2;
-    align-items: center;
-    margin: 1em;
-  }
-  aside > div {
-    height: 5em;
-  }
-
   footer {
-    flex: 2;
-    justify-content: flex-end;
+    margin: 0.5em;
+    flex-grow: 3;
+    min-height: 80vh;
+  }
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header {
+    width: 100%;
+    max-height: 10vh;
   }
 }
-
